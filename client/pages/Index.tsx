@@ -223,33 +223,21 @@ export default function Index() {
         
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <div style={{ 
-            display: 'inline-flex', 
-            alignItems: 'center', 
-            gap: '12px',
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             marginBottom: '16px'
           }}>
-            <div style={{
-              width: '52px',
-              height: '52px',
-              background: 'linear-gradient(135deg, #3c52a3, #6dcddc)',
-              borderRadius: '14px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 8px 32px rgba(60, 82, 163, 0.3)'
-            }}>
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
-            </div>
-            <span style={{ 
-              fontSize: '36px', 
-              fontWeight: '700', 
-              background: 'linear-gradient(135deg, #6dcddc, #3c52a3)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>Medipyxis</span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Fac116b107b2244fa838b813a8e2e3216%2Fa8b25b53592d4b6fb3f99017b9e83ee4?format=webp&width=800"
+              alt="Medipyxis Logo"
+              style={{
+                height: '60px',
+                width: 'auto',
+                objectFit: 'contain'
+              }}
+            />
           </div>
           <h1 style={{ 
             fontSize: '44px', 
