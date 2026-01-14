@@ -213,42 +213,101 @@ export default function Index() {
   };
 
   return (
-    <div style={{ 
+    <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(145deg, #0a0f1a 0%, #111827 50%, #0a0f1a 100%)',
-      padding: '40px 20px',
-      fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
+      background: '#F7F8F9',
+      padding: '0',
+      fontFamily: "'Nunito', -apple-system, BlinkMacSystemFont, sans-serif"
     }}>
-      <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-        
+      {/* Top Navigation Bar */}
+      <div style={{
+        background: 'white',
+        borderBottom: '1px solid #EDEEF2',
+        padding: '16px 40px',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+      }}>
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2Fac116b107b2244fa838b813a8e2e3216%2Fa8b25b53592d4b6fb3f99017b9e83ee4?format=webp&width=800"
+          alt="Medipyxis Logo"
+          style={{
+            height: '40px',
+            width: 'auto',
+            objectFit: 'contain'
+          }}
+        />
+        <div style={{ display: 'flex', gap: '12px' }}>
+          <a
+            href="https://medipyxis.com/pricing-contact-form"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              padding: '10px 24px',
+              borderRadius: '6px',
+              border: '2px solid #37ca37',
+              background: 'white',
+              color: '#37ca37',
+              fontSize: '15px',
+              fontWeight: '600',
+              textDecoration: 'none',
+              transition: 'all 0.2s ease',
+              cursor: 'pointer'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.background = '#37ca37';
+              e.currentTarget.style.color = 'white';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.background = 'white';
+              e.currentTarget.style.color = '#37ca37';
+            }}
+          >
+            Get Pricing
+          </a>
+          <a
+            href="https://medipyxis.com/schedule-a-demo-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              padding: '10px 24px',
+              borderRadius: '6px',
+              background: '#37ca37',
+              color: 'white',
+              fontSize: '15px',
+              fontWeight: '600',
+              textDecoration: 'none',
+              transition: 'all 0.2s ease',
+              cursor: 'pointer',
+              boxShadow: '0 2px 8px rgba(55, 202, 55, 0.3)'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.background = '#2db82d';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.background = '#37ca37';
+            }}
+          >
+            Book a Demo
+          </a>
+        </div>
+      </div>
+
+      <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '40px 20px' }}>
+
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginBottom: '16px'
-          }}>
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2Fac116b107b2244fa838b813a8e2e3216%2Fa8b25b53592d4b6fb3f99017b9e83ee4?format=webp&width=800"
-              alt="Medipyxis Logo"
-              style={{
-                height: '60px',
-                width: 'auto',
-                objectFit: 'contain'
-              }}
-            />
-          </div>
-          <h1 style={{ 
-            fontSize: '44px', 
-            fontWeight: '800', 
-            color: 'white',
+          <h1 style={{
+            fontSize: '44px',
+            fontWeight: '800',
+            color: '#212371',
             margin: '0 0 12px 0',
-            letterSpacing: '-0.02em'
+            letterSpacing: '-0.02em',
+            fontFamily: "'Inter', sans-serif"
           }}>ROI Calculator</h1>
-          <p style={{ 
-            fontSize: '18px', 
-            color: '#94a3b8',
+          <p style={{
+            fontSize: '18px',
+            color: '#8893A8',
             margin: 0,
             maxWidth: '700px',
             marginLeft: 'auto',
