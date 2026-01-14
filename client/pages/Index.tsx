@@ -324,12 +324,26 @@ export default function Index() {
           padding: 40px 20px;
         }
 
+        .roi-hero-header {
+          text-align: center;
+          margin-bottom: 48px;
+        }
+
+        @media (max-width: 768px) {
+          .roi-hero-header {
+            margin-bottom: 32px;
+          }
+        }
+
         @media (max-width: 640px) {
           .roi-content-wrapper {
             padding: 24px 16px;
           }
           .roi-main-grid > div {
             padding: 20px !important;
+          }
+          .roi-hero-header {
+            margin-bottom: 24px;
           }
         }
       `}</style>
