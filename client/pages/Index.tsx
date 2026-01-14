@@ -229,7 +229,7 @@ export default function Index() {
         alignItems: 'center'
       }}>
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2Fac116b107b2244fa838b813a8e2e3216%2Fa8b25b53592d4b6fb3f99017b9e83ee4?format=webp&width=800"
+          src="https://cdn.builder.io/api/v1/image/assets%2Fac116b107b2244fa838b813a8e2e3216%2Fb21f5995810142abbe9cee6599bfe39a?format=webp&width=800"
           alt="Medipyxis Logo"
           style={{
             height: '40px',
