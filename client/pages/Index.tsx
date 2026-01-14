@@ -677,63 +677,66 @@ export default function Index() {
               
               {/* ROI */}
               <div style={{
-                background: 'linear-gradient(135deg, rgba(60, 82, 163, 0.25), rgba(109, 205, 220, 0.1))',
-                borderRadius: '20px',
-                border: '1px solid rgba(109, 205, 220, 0.25)',
+                background: 'white',
+                borderRadius: '12px',
+                border: '2px solid #37ca37',
                 padding: '24px',
-                textAlign: 'center'
+                textAlign: 'center',
+                boxShadow: '0 4px 12px rgba(55, 202, 55, 0.15)'
               }}>
-                <div style={{ fontSize: '12px', color: '#94a3b8', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>3-Year ROI</div>
-                <div style={{ 
-                  fontSize: '42px', 
-                  fontWeight: '800', 
-                  background: 'linear-gradient(135deg, #6dcddc, #3c52a3)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  lineHeight: 1
+                <div style={{ fontSize: '12px', color: '#8893A8', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '600' }}>3-Year ROI</div>
+                <div style={{
+                  fontSize: '42px',
+                  fontWeight: '800',
+                  color: '#37ca37',
+                  lineHeight: 1,
+                  fontFamily: "'Inter', sans-serif"
                 }}>{formatNumber(calculations.roiVsCurrent)}%</div>
-                <div style={{ fontSize: '11px', color: '#64748b', marginTop: '4px' }}>vs current stack</div>
+                <div style={{ fontSize: '11px', color: '#8893A8', marginTop: '4px' }}>vs current stack</div>
               </div>
 
               {/* Net Gain */}
               <div style={{
-                background: 'rgba(34, 197, 94, 0.08)',
-                borderRadius: '20px',
-                border: '1px solid rgba(34, 197, 94, 0.2)',
+                background: 'white',
+                borderRadius: '12px',
+                border: '1px solid #EDEEF2',
                 padding: '24px',
-                textAlign: 'center'
+                textAlign: 'center',
+                boxShadow: '0 1px 3px rgba(0,0,0,0.06)'
               }}>
-                <div style={{ fontSize: '12px', color: '#94a3b8', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Net Gain (3yr)</div>
-                <div style={{ fontSize: '32px', fontWeight: '700', color: '#22c55e', lineHeight: 1 }}>
+                <div style={{ fontSize: '12px', color: '#8893A8', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '600' }}>Net Gain (3yr)</div>
+                <div style={{ fontSize: '32px', fontWeight: '700', color: '#37ca37', lineHeight: 1, fontFamily: "'Inter', sans-serif" }}>
                   {formatCurrency(calculations.netGain3Year)}
                 </div>
               </div>
 
               {/* Payback */}
               <div style={{
-                background: 'rgba(255,255,255,0.03)',
-                borderRadius: '20px',
-                border: '1px solid rgba(255,255,255,0.08)',
+                background: 'white',
+                borderRadius: '12px',
+                border: '1px solid #EDEEF2',
                 padding: '24px',
-                textAlign: 'center'
+                textAlign: 'center',
+                boxShadow: '0 1px 3px rgba(0,0,0,0.06)'
               }}>
-                <div style={{ fontSize: '12px', color: '#94a3b8', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Payback Period</div>
-                <div style={{ fontSize: '32px', fontWeight: '700', color: 'white', lineHeight: 1 }}>
+                <div style={{ fontSize: '12px', color: '#8893A8', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '600' }}>Payback Period</div>
+                <div style={{ fontSize: '32px', fontWeight: '700', color: '#212371', lineHeight: 1, fontFamily: "'Inter', sans-serif" }}>
                   {calculations.paybackMonths.toFixed(1)}
                 </div>
-                <div style={{ fontSize: '11px', color: '#64748b', marginTop: '4px' }}>months</div>
+                <div style={{ fontSize: '11px', color: '#8893A8', marginTop: '4px' }}>months</div>
               </div>
 
               {/* Hours Saved */}
               <div style={{
-                background: 'rgba(255,255,255,0.03)',
-                borderRadius: '20px',
-                border: '1px solid rgba(255,255,255,0.08)',
+                background: 'white',
+                borderRadius: '12px',
+                border: '1px solid #EDEEF2',
                 padding: '24px',
-                textAlign: 'center'
+                textAlign: 'center',
+                boxShadow: '0 1px 3px rgba(0,0,0,0.06)'
               }}>
-                <div style={{ fontSize: '12px', color: '#94a3b8', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Hours Saved (3yr)</div>
-                <div style={{ fontSize: '32px', fontWeight: '700', color: 'white', lineHeight: 1 }}>
+                <div style={{ fontSize: '12px', color: '#8893A8', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '600' }}>Hours Saved (3yr)</div>
+                <div style={{ fontSize: '32px', fontWeight: '700', color: '#188bf6', lineHeight: 1, fontFamily: "'Inter', sans-serif" }}>
                   {formatNumber(calculations.totalHoursSaved3Year)}
                 </div>
               </div>
