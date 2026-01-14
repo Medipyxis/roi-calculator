@@ -219,6 +219,102 @@ export default function Index() {
       padding: '0',
       fontFamily: "'Nunito', -apple-system, BlinkMacSystemFont, sans-serif"
     }}>
+      <style>{`
+        .roi-header {
+          background: white;
+          border-bottom: 1px solid #EDEEF2;
+          padding: 16px 40px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .roi-header-buttons {
+          display: flex;
+          gap: 12px;
+          align-items: center;
+        }
+        .roi-main-grid {
+          display: grid;
+          grid-template-columns: 420px 1fr;
+          gap: 32px;
+        }
+        .roi-hero-metrics {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
+        }
+        .roi-comparison-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 16px;
+        }
+        .roi-provider-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+
+        @media (max-width: 1024px) {
+          .roi-main-grid {
+            grid-template-columns: 1fr;
+          }
+          .roi-hero-metrics {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .roi-header {
+            padding: 12px 20px;
+            flex-direction: column;
+            gap: 16px;
+          }
+          .roi-header-buttons {
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            gap: 8px;
+          }
+          .roi-header-buttons a {
+            flex: 1;
+            min-width: 140px;
+            text-align: center;
+            font-size: 14px !important;
+            padding: 8px 16px !important;
+          }
+          .roi-hero-metrics {
+            grid-template-columns: 1fr;
+          }
+          .roi-comparison-grid {
+            grid-template-columns: 1fr;
+          }
+          .roi-provider-grid {
+            grid-template-columns: 1fr;
+          }
+          h1 {
+            font-size: 32px !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .roi-header {
+            padding: 12px 16px;
+          }
+          .roi-header img {
+            height: 32px !important;
+          }
+          .roi-header-buttons {
+            flex-direction: column;
+            width: 100%;
+          }
+          .roi-header-buttons a {
+            width: 100%;
+          }
+          h1 {
+            font-size: 28px !important;
+          }
+        }
+      `}</style>
       {/* Top Navigation Bar */}
       <div style={{
         background: 'white',
