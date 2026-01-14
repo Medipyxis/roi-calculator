@@ -932,67 +932,69 @@ export default function Index() {
               <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#212371', margin: '0 0 24px 0', fontFamily: "'Inter', sans-serif" }}>
                 Detailed Comparison
               </h3>
-              
-              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                <thead>
-                  <tr>
-                    <th style={{ textAlign: 'left', padding: '12px 16px', fontSize: '11px', color: '#8893A8', textTransform: 'uppercase', letterSpacing: '0.05em', borderBottom: '2px solid #EDEEF2', fontWeight: '600' }}>Metric</th>
-                    <th style={{ textAlign: 'right', padding: '12px 16px', fontSize: '11px', color: '#37ca37', textTransform: 'uppercase', letterSpacing: '0.05em', borderBottom: '2px solid #EDEEF2', fontWeight: '600' }}>Medipyxis</th>
-                    <th style={{ textAlign: 'right', padding: '12px 16px', fontSize: '11px', color: '#f59e0b', textTransform: 'uppercase', letterSpacing: '0.05em', borderBottom: '2px solid #EDEEF2', fontWeight: '600' }}>Current Stack</th>
-                    <th style={{ textAlign: 'right', padding: '12px 16px', fontSize: '11px', color: '#ef4444', textTransform: 'uppercase', letterSpacing: '0.05em', borderBottom: '2px solid #EDEEF2', fontWeight: '600' }}>Salesforce HC</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Upfront Cost</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#212371', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>{formatCurrency(calculations.medipyxisStartup)}</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#212371', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>$0</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#212371', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>$250,000</td>
-                  </tr>
-                  <tr>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Monthly Cost / Provider</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '600', borderBottom: '1px solid #EDEEF2' }}>${medipyxisPrice}</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#212371', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>{formatCurrency(calculations.currentMonthlyPerUser)}</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#ef4444', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>{formatCurrency(calculations.salesforceMonthlyPerUser)}</td>
-                  </tr>
-                  <tr>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Tools Included</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '600', borderBottom: '1px solid #EDEEF2' }}>8 of 8</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#f59e0b', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>8 (separate)</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#ef4444', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>2 of 8</td>
-                  </tr>
-                  <tr>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Additional Tools Needed</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>None</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>—</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#ef4444', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>6 tools (+{formatCurrency(calculations.sfAdditionalToolsCost)}/user)</td>
-                  </tr>
-                  <tr>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>3-Year Total Cost</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '600', borderBottom: '1px solid #EDEEF2' }}>{formatCurrency(calculations.medipyxis3YearCost)}</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#f59e0b', textAlign: 'right', fontWeight: '600', borderBottom: '1px solid #EDEEF2' }}>{formatCurrency(calculations.current3YearCost)}</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#ef4444', textAlign: 'right', fontWeight: '600', borderBottom: '1px solid #EDEEF2' }}>{formatCurrency(calculations.salesforce3YearCost)}</td>
-                  </tr>
-                  <tr>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Denial Rate</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>&lt;1%</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#f59e0b', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>{currentDenialRate}%</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#f59e0b', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>{currentDenialRate}%</td>
-                  </tr>
-                  <tr>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Doc Time Reduction</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>70%</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>—</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>—</td>
-                  </tr>
-                  <tr>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8' }}>Revenue Recovered (3yr)</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '600' }}>{formatCurrency(calculations.totalAdditionalRevenue3Year)}</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500' }}>—</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500' }}>—</td>
-                  </tr>
-                </tbody>
-              </table>
+
+              <div style={{ overflowX: 'auto' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '600px' }}>
+                  <thead>
+                    <tr>
+                      <th style={{ textAlign: 'left', padding: '12px 16px', fontSize: '11px', color: '#8893A8', textTransform: 'uppercase', letterSpacing: '0.05em', borderBottom: '2px solid #EDEEF2', fontWeight: '600' }}>Metric</th>
+                      <th style={{ textAlign: 'right', padding: '12px 16px', fontSize: '11px', color: '#37ca37', textTransform: 'uppercase', letterSpacing: '0.05em', borderBottom: '2px solid #EDEEF2', fontWeight: '600' }}>Medipyxis</th>
+                      <th style={{ textAlign: 'right', padding: '12px 16px', fontSize: '11px', color: '#f59e0b', textTransform: 'uppercase', letterSpacing: '0.05em', borderBottom: '2px solid #EDEEF2', fontWeight: '600' }}>Current Stack</th>
+                      <th style={{ textAlign: 'right', padding: '12px 16px', fontSize: '11px', color: '#ef4444', textTransform: 'uppercase', letterSpacing: '0.05em', borderBottom: '2px solid #EDEEF2', fontWeight: '600' }}>Salesforce HC</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Upfront Cost</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#212371', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>{formatCurrency(calculations.medipyxisStartup)}</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#212371', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>$0</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#212371', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>$250,000</td>
+                    </tr>
+                    <tr>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Monthly Cost / Provider</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '600', borderBottom: '1px solid #EDEEF2' }}>${medipyxisPrice}</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#212371', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>{formatCurrency(calculations.currentMonthlyPerUser)}</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#ef4444', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>{formatCurrency(calculations.salesforceMonthlyPerUser)}</td>
+                    </tr>
+                    <tr>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Tools Included</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '600', borderBottom: '1px solid #EDEEF2' }}>8 of 8</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#f59e0b', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>8 (separate)</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#ef4444', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>2 of 8</td>
+                    </tr>
+                    <tr>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Additional Tools Needed</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>None</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>—</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#ef4444', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>6 tools (+{formatCurrency(calculations.sfAdditionalToolsCost)}/user)</td>
+                    </tr>
+                    <tr>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>3-Year Total Cost</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '600', borderBottom: '1px solid #EDEEF2' }}>{formatCurrency(calculations.medipyxis3YearCost)}</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#f59e0b', textAlign: 'right', fontWeight: '600', borderBottom: '1px solid #EDEEF2' }}>{formatCurrency(calculations.current3YearCost)}</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#ef4444', textAlign: 'right', fontWeight: '600', borderBottom: '1px solid #EDEEF2' }}>{formatCurrency(calculations.salesforce3YearCost)}</td>
+                    </tr>
+                    <tr>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Denial Rate</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>&lt;1%</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#f59e0b', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>{currentDenialRate}%</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#f59e0b', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>{currentDenialRate}%</td>
+                    </tr>
+                    <tr>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Doc Time Reduction</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>70%</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>—</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>—</td>
+                    </tr>
+                    <tr>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8' }}>Revenue Recovered (3yr)</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '600' }}>{formatCurrency(calculations.totalAdditionalRevenue3Year)}</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500' }}>—</td>
+                      <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500' }}>—</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
 
             {/* Per Provider Impact */}
