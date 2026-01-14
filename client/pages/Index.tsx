@@ -318,7 +318,16 @@ export default function Index() {
           }
         }
 
+        .roi-content-wrapper {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 40px 20px;
+        }
+
         @media (max-width: 640px) {
+          .roi-content-wrapper {
+            padding: 24px 16px;
+          }
           .roi-main-grid > div {
             padding: 20px !important;
           }
