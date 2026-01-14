@@ -498,7 +498,7 @@ export default function Index() {
                 alignItems: 'center',
                 gap: '10px'
               }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6dcddc" strokeWidth="2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#188bf6" strokeWidth="2">
                   <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                 </svg>
                 Financial Metrics
@@ -509,8 +509,8 @@ export default function Index() {
                 {/* Annual Revenue */}
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <label style={{ fontSize: '14px', color: '#94a3b8' }}>Annual Revenue / Provider</label>
-                    <span style={{ fontSize: '14px', color: '#6dcddc', fontWeight: '600' }}>{formatCurrency(annualRevenuePerProvider)}</span>
+                    <label style={{ fontSize: '14px', color: '#8893A8' }}>Annual Revenue / Provider</label>
+                    <span style={{ fontSize: '14px', color: '#188bf6', fontWeight: '600' }}>{formatCurrency(annualRevenuePerProvider)}</span>
                   </div>
                   <input
                     type="range"
@@ -523,7 +523,7 @@ export default function Index() {
                       width: '100%',
                       height: '6px',
                       borderRadius: '3px',
-                      background: `linear-gradient(to right, #3c52a3 0%, #6dcddc ${((annualRevenuePerProvider-250000)/1750000)*100}%, #1e293b ${((annualRevenuePerProvider-250000)/1750000)*100}%)`,
+                      background: `linear-gradient(to right, #188bf6 0%, #188bf6 ${((annualRevenuePerProvider-250000)/1750000)*100}%, #EDEEF2 ${((annualRevenuePerProvider-250000)/1750000)*100}%)`,
                       appearance: 'none',
                       cursor: 'pointer'
                     }}
@@ -533,7 +533,7 @@ export default function Index() {
                 {/* Current Denial Rate */}
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <label style={{ fontSize: '14px', color: '#94a3b8' }}>Current Denial Rate</label>
+                    <label style={{ fontSize: '14px', color: '#8893A8' }}>Current Denial Rate</label>
                     <span style={{ fontSize: '14px', color: '#f59e0b', fontWeight: '600' }}>{currentDenialRate}%</span>
                   </div>
                   <input
@@ -546,7 +546,7 @@ export default function Index() {
                       width: '100%',
                       height: '6px',
                       borderRadius: '3px',
-                      background: `linear-gradient(to right, #3c52a3 0%, #6dcddc ${((currentDenialRate-5)/30)*100}%, #1e293b ${((currentDenialRate-5)/30)*100}%)`,
+                      background: `linear-gradient(to right, #f59e0b 0%, #f59e0b ${((currentDenialRate-5)/30)*100}%, #EDEEF2 ${((currentDenialRate-5)/30)*100}%)`,
                       appearance: 'none',
                       cursor: 'pointer'
                     }}
@@ -556,8 +556,8 @@ export default function Index() {
                 {/* Daily Doc Time */}
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <label style={{ fontSize: '14px', color: '#94a3b8' }}>Daily Doc Time / Provider</label>
-                    <span style={{ fontSize: '14px', color: '#6dcddc', fontWeight: '600' }}>{dailyDocTime} hrs</span>
+                    <label style={{ fontSize: '14px', color: '#8893A8' }}>Daily Doc Time / Provider</label>
+                    <span style={{ fontSize: '14px', color: '#188bf6', fontWeight: '600' }}>{dailyDocTime} hrs</span>
                   </div>
                   <input
                     type="range"
@@ -570,7 +570,7 @@ export default function Index() {
                       width: '100%',
                       height: '6px',
                       borderRadius: '3px',
-                      background: `linear-gradient(to right, #3c52a3 0%, #6dcddc ${((dailyDocTime-1)/4)*100}%, #1e293b ${((dailyDocTime-1)/4)*100}%)`,
+                      background: `linear-gradient(to right, #188bf6 0%, #188bf6 ${((dailyDocTime-1)/4)*100}%, #EDEEF2 ${((dailyDocTime-1)/4)*100}%)`,
                       appearance: 'none',
                       cursor: 'pointer'
                     }}
@@ -581,11 +581,11 @@ export default function Index() {
 
             {/* Current Software Stack */}
             <div style={{
-              background: 'rgba(255,255,255,0.02)',
-              backdropFilter: 'blur(20px)',
-              borderRadius: '20px',
-              border: '1px solid rgba(255,255,255,0.06)',
-              padding: '28px'
+              background: 'white',
+              borderRadius: '12px',
+              border: '1px solid #EDEEF2',
+              padding: '28px',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.06)'
             }}>
               <div 
                 style={{ 
