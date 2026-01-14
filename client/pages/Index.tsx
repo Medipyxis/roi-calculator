@@ -316,14 +316,7 @@ export default function Index() {
         }
       `}</style>
       {/* Top Navigation Bar */}
-      <div style={{
-        background: 'white',
-        borderBottom: '1px solid #EDEEF2',
-        padding: '16px 40px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center'
-      }}>
+      <div className="roi-header">
         <img
           src="https://cdn.builder.io/api/v1/image/assets%2Fac116b107b2244fa838b813a8e2e3216%2Fb21f5995810142abbe9cee6599bfe39a?format=webp&width=800"
           alt="Medipyxis Logo"
@@ -333,7 +326,7 @@ export default function Index() {
             objectFit: 'contain'
           }}
         />
-        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+        <div className="roi-header-buttons">
           <a
             href="https://storage.googleapis.com/msgsndr/gwLlGQ7RXvOTbVZjTWZs/media/6967bad4cd8665e2ca22fd56.pdf"
             target="_blank"
@@ -446,7 +439,7 @@ export default function Index() {
         </div>
 
         {/* Main Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: '420px 1fr', gap: '32px' }}>
+        <div className="roi-main-grid">
           
           {/* Input Panel */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -801,7 +794,7 @@ export default function Index() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             
             {/* Hero Metrics */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
+            <div className="roi-hero-metrics">
               
               {/* ROI */}
               <div style={{
@@ -897,10 +890,7 @@ export default function Index() {
                 ]}
               />
               
-              <div style={{ 
-                display: 'grid', 
-                gridTemplateColumns: 'repeat(3, 1fr)', 
-                gap: '16px',
+              <div className="roi-comparison-grid" style={{
                 marginTop: '20px',
                 padding: '20px',
                 background: '#F7F8F9',
@@ -1017,7 +1007,7 @@ export default function Index() {
                 Per Provider Impact (3 Years)
               </h3>
               
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
+              <div className="roi-provider-grid">
                 <div>
                   <div style={{ fontSize: '11px', color: '#8893A8', marginBottom: '4px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Software Savings</div>
                   <div style={{ fontSize: '26px', fontWeight: '700', color: '#37ca37', fontFamily: "'Inter', sans-serif" }}>{formatCurrency(calculations.perProviderSoftwareSavings3Year)}</div>
