@@ -364,7 +364,7 @@ export default function Index() {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              padding: '10px 20px',
+              padding: '10px 24px',
               borderRadius: '6px',
               background: '#188bf6',
               color: 'white',
@@ -373,9 +373,7 @@ export default function Index() {
               textDecoration: 'none',
               transition: 'all 0.2s ease',
               cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px'
+              textAlign: 'center'
             }}
             onMouseOver={(e) => {
               e.currentTarget.style.background = '#1576d1';
@@ -384,12 +382,7 @@ export default function Index() {
               e.currentTarget.style.background = '#188bf6';
             }}
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-              <line x1="12" y1="17" x2="12.01" y2="17"/>
-            </svg>
-            0% Financing Available
+            0% Financing
           </a>
           <a
             href="https://medipyxis.com/pricing-contact-form"
