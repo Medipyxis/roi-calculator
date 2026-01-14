@@ -313,6 +313,15 @@ export default function Index() {
           h1 {
             font-size: 28px !important;
           }
+          p {
+            font-size: 16px !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .roi-main-grid > div {
+            padding: 20px !important;
+          }
         }
       `}</style>
       {/* Top Navigation Bar */}
