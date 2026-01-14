@@ -418,8 +418,8 @@ export default function Index() {
                 {/* Clinics */}
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <label style={{ fontSize: '14px', color: '#94a3b8' }}>Clinic Locations</label>
-                    <span style={{ fontSize: '14px', color: '#6dcddc', fontWeight: '600' }}>{clinics}</span>
+                    <label style={{ fontSize: '14px', color: '#8893A8' }}>Clinic Locations</label>
+                    <span style={{ fontSize: '14px', color: '#37ca37', fontWeight: '600' }}>{clinics}</span>
                   </div>
                   <input
                     type="range"
@@ -431,7 +431,7 @@ export default function Index() {
                       width: '100%',
                       height: '6px',
                       borderRadius: '3px',
-                      background: `linear-gradient(to right, #3c52a3 0%, #6dcddc ${(clinics/20)*100}%, #1e293b ${(clinics/20)*100}%)`,
+                      background: `linear-gradient(to right, #37ca37 0%, #37ca37 ${(clinics/20)*100}%, #EDEEF2 ${(clinics/20)*100}%)`,
                       appearance: 'none',
                       cursor: 'pointer'
                     }}
@@ -441,8 +441,8 @@ export default function Index() {
                 {/* Medipyxis Price */}
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <label style={{ fontSize: '14px', color: '#94a3b8' }}>Medipyxis Price/Provider</label>
-                    <span style={{ fontSize: '14px', color: '#6dcddc', fontWeight: '600' }}>${medipyxisPrice}/mo</span>
+                    <label style={{ fontSize: '14px', color: '#8893A8' }}>Medipyxis Price/Provider</label>
+                    <span style={{ fontSize: '14px', color: '#37ca37', fontWeight: '600' }}>${medipyxisPrice}/mo</span>
                   </div>
                   <input
                     type="range"
@@ -455,7 +455,7 @@ export default function Index() {
                       width: '100%',
                       height: '6px',
                       borderRadius: '3px',
-                      background: `linear-gradient(to right, #3c52a3 0%, #6dcddc ${((medipyxisPrice-200)/400)*100}%, #1e293b ${((medipyxisPrice-200)/400)*100}%)`,
+                      background: `linear-gradient(to right, #37ca37 0%, #37ca37 ${((medipyxisPrice-200)/400)*100}%, #EDEEF2 ${((medipyxisPrice-200)/400)*100}%)`,
                       appearance: 'none',
                       cursor: 'pointer'
                     }}
@@ -465,14 +465,14 @@ export default function Index() {
                 {/* Startup Cost Display */}
                 <div style={{
                   padding: '14px 16px',
-                  background: 'rgba(60, 82, 163, 0.15)',
+                  background: 'rgba(55, 202, 55, 0.08)',
                   borderRadius: '10px',
-                  border: '1px solid rgba(60, 82, 163, 0.25)'
+                  border: '1px solid rgba(55, 202, 55, 0.2)'
                 }}>
-                  <div style={{ fontSize: '12px', color: '#94a3b8', marginBottom: '4px' }}>Medipyxis Startup Cost</div>
-                  <div style={{ fontSize: '20px', fontWeight: '700', color: '#6dcddc' }}>
+                  <div style={{ fontSize: '12px', color: '#8893A8', marginBottom: '4px' }}>Medipyxis Startup Cost</div>
+                  <div style={{ fontSize: '20px', fontWeight: '700', color: '#37ca37' }}>
                     {formatCurrency(calculations.medipyxisStartup)}
-                    <span style={{ fontSize: '12px', fontWeight: '400', color: '#64748b', marginLeft: '8px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: '400', color: '#8893A8', marginLeft: '8px' }}>
                       ({isSoloPractice ? 'Solo' : 'Standard'})
                     </span>
                   </div>
@@ -482,16 +482,17 @@ export default function Index() {
 
             {/* Financial Inputs */}
             <div style={{
-              background: 'rgba(255,255,255,0.02)',
-              backdropFilter: 'blur(20px)',
-              borderRadius: '20px',
-              border: '1px solid rgba(255,255,255,0.06)',
-              padding: '28px'
+              background: 'white',
+              borderRadius: '12px',
+              border: '1px solid #EDEEF2',
+              padding: '28px',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.06)'
             }}>
-              <h2 style={{ 
-                fontSize: '16px', 
-                fontWeight: '600', 
-                color: 'white',
+              <h2 style={{
+                fontSize: '16px',
+                fontWeight: '600',
+                color: '#212371',
+                fontFamily: "'Inter', sans-serif",
                 margin: '0 0 20px 0',
                 display: 'flex',
                 alignItems: 'center',
