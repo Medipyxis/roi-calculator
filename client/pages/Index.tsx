@@ -449,7 +449,7 @@ export default function Index() {
       <div className="roi-content-wrapper">
 
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+        <div className="roi-hero-header">
           <h1 style={{
             fontSize: '44px',
             fontWeight: '800',
