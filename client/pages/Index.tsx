@@ -891,55 +891,56 @@ export default function Index() {
               
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
                 <div>
-                  <div style={{ fontSize: '11px', color: '#94a3b8', marginBottom: '4px' }}>Software Savings</div>
-                  <div style={{ fontSize: '26px', fontWeight: '700', color: '#22c55e' }}>{formatCurrency(calculations.perProviderSoftwareSavings3Year)}</div>
+                  <div style={{ fontSize: '11px', color: '#8893A8', marginBottom: '4px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Software Savings</div>
+                  <div style={{ fontSize: '26px', fontWeight: '700', color: '#37ca37', fontFamily: "'Inter', sans-serif" }}>{formatCurrency(calculations.perProviderSoftwareSavings3Year)}</div>
                 </div>
                 <div>
-                  <div style={{ fontSize: '11px', color: '#94a3b8', marginBottom: '4px' }}>Time Value Saved</div>
-                  <div style={{ fontSize: '26px', fontWeight: '700', color: '#22c55e' }}>{formatCurrency(calculations.perProviderTimeSavings3Year)}</div>
+                  <div style={{ fontSize: '11px', color: '#8893A8', marginBottom: '4px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Time Value Saved</div>
+                  <div style={{ fontSize: '26px', fontWeight: '700', color: '#188bf6', fontFamily: "'Inter', sans-serif" }}>{formatCurrency(calculations.perProviderTimeSavings3Year)}</div>
                 </div>
                 <div>
-                  <div style={{ fontSize: '11px', color: '#94a3b8', marginBottom: '4px' }}>Revenue Recovered</div>
-                  <div style={{ fontSize: '26px', fontWeight: '700', color: '#22c55e' }}>{formatCurrency(calculations.perProviderRevGain3Year)}</div>
+                  <div style={{ fontSize: '11px', color: '#8893A8', marginBottom: '4px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Revenue Recovered</div>
+                  <div style={{ fontSize: '26px', fontWeight: '700', color: '#37ca37', fontFamily: "'Inter', sans-serif" }}>{formatCurrency(calculations.perProviderRevGain3Year)}</div>
                 </div>
               </div>
               
-              <div style={{ 
-                marginTop: '20px', 
-                paddingTop: '20px', 
-                borderTop: '1px solid rgba(255,255,255,0.1)',
+              <div style={{
+                marginTop: '20px',
+                paddingTop: '20px',
+                borderTop: '2px solid #EDEEF2',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center'
               }}>
-                <span style={{ fontSize: '14px', color: '#94a3b8' }}>Total Benefit Per Provider</span>
-                <span style={{ fontSize: '36px', fontWeight: '800', color: '#22c55e' }}>{formatCurrency(calculations.perProviderTotalBenefit)}</span>
+                <span style={{ fontSize: '14px', color: '#8893A8', fontWeight: '600' }}>Total Benefit Per Provider</span>
+                <span style={{ fontSize: '36px', fontWeight: '800', color: '#37ca37', fontFamily: "'Inter', sans-serif" }}>{formatCurrency(calculations.perProviderTotalBenefit)}</span>
               </div>
             </div>
 
             {/* Executive Summary */}
             <div style={{
-              background: 'rgba(255,255,255,0.02)',
-              borderRadius: '20px',
-              border: '1px solid rgba(255,255,255,0.06)',
-              padding: '32px'
+              background: 'white',
+              borderRadius: '12px',
+              border: '1px solid #EDEEF2',
+              padding: '32px',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.06)'
             }}>
-              <h3 style={{ fontSize: '16px', fontWeight: '600', color: 'white', margin: '0 0 16px 0' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#212371', margin: '0 0 16px 0', fontFamily: "'Inter', sans-serif" }}>
                 Executive Summary
               </h3>
-              <p style={{ fontSize: '15px', color: '#cbd5e1', lineHeight: 1.8, margin: 0 }}>
-                For {isSoloPractice ? 'a solo practice' : `a practice with ${providers} providers across ${clinics} ${clinics === 1 ? 'location' : 'locations'}`}, 
-                Medipyxis delivers a <strong style={{ color: '#6dcddc' }}>{formatNumber(calculations.roiVsCurrent)}% ROI</strong> over 3 years 
-                compared to your current 8-tool stack. By consolidating everything into one platform, reducing documentation time by 70%, 
-                and cutting denial rates from {currentDenialRate}% to under 1%, your total benefit is <strong style={{ color: '#22c55e' }}>{formatCurrency(calculations.netGain3Year)}</strong>.
-                {' '}The {formatCurrency(calculations.medipyxisStartup)} startup investment pays back in just <strong style={{ color: 'white' }}>{calculations.paybackMonths.toFixed(1)} months</strong>.
-                {' '}Compared to building on Salesforce Health Cloud (which only replaces 2 of 8 tools and costs {formatCurrency(calculations.salesforce3YearCost)} over 3 years), 
-                Medipyxis saves you an additional <strong style={{ color: '#22c55e' }}>{formatCurrency(calculations.savingsVsSalesforce)}</strong>.
+              <p style={{ fontSize: '15px', color: '#212371', lineHeight: 1.8, margin: 0 }}>
+                For {isSoloPractice ? 'a solo practice' : `a practice with ${providers} providers across ${clinics} ${clinics === 1 ? 'location' : 'locations'}`},
+                Medipyxis delivers a <strong style={{ color: '#37ca37' }}>{formatNumber(calculations.roiVsCurrent)}% ROI</strong> over 3 years
+                compared to your current 8-tool stack. By consolidating everything into one platform, reducing documentation time by 70%,
+                and cutting denial rates from {currentDenialRate}% to under 1%, your total benefit is <strong style={{ color: '#37ca37' }}>{formatCurrency(calculations.netGain3Year)}</strong>.
+                {' '}The {formatCurrency(calculations.medipyxisStartup)} startup investment pays back in just <strong style={{ color: '#188bf6' }}>{calculations.paybackMonths.toFixed(1)} months</strong>.
+                {' '}Compared to building on Salesforce Health Cloud (which only replaces 2 of 8 tools and costs {formatCurrency(calculations.salesforce3YearCost)} over 3 years),
+                Medipyxis saves you an additional <strong style={{ color: '#37ca37' }}>{formatCurrency(calculations.savingsVsSalesforce)}</strong>.
               </p>
             </div>
 
             {/* Disclaimer */}
-            <div style={{ fontSize: '12px', color: '#475569', textAlign: 'center', padding: '0 20px' }}>
+            <div style={{ fontSize: '12px', color: '#8893A8', textAlign: 'center', padding: '0 20px' }}>
               * Estimates based on industry averages and typical Medipyxis outcomes. Actual results may vary based on practice specifics.
             </div>
           </div>
