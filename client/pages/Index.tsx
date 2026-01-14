@@ -856,22 +856,22 @@ export default function Index() {
                     <td style={{ padding: '14px 16px', fontSize: '13px', color: '#ef4444', textAlign: 'right', fontWeight: '600', borderBottom: '1px solid #EDEEF2' }}>{formatCurrency(calculations.salesforce3YearCost)}</td>
                   </tr>
                   <tr>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#94a3b8', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>Denial Rate</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#22c55e', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>&lt;1%</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#f59e0b', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>{currentDenialRate}%</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#f59e0b', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>{currentDenialRate}%</td>
+                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Denial Rate</td>
+                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>&lt;1%</td>
+                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#f59e0b', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>{currentDenialRate}%</td>
+                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#f59e0b', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>{currentDenialRate}%</td>
                   </tr>
                   <tr>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#94a3b8', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>Doc Time Reduction</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#22c55e', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>70%</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#64748b', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>—</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#64748b', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>—</td>
+                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', borderBottom: '1px solid #EDEEF2' }}>Doc Time Reduction</td>
+                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>70%</td>
+                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>—</td>
+                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500', borderBottom: '1px solid #EDEEF2' }}>—</td>
                   </tr>
                   <tr>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#94a3b8' }}>Revenue Recovered (3yr)</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#22c55e', textAlign: 'right', fontWeight: '600' }}>{formatCurrency(calculations.totalAdditionalRevenue3Year)}</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#64748b', textAlign: 'right', fontWeight: '500' }}>—</td>
-                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#64748b', textAlign: 'right', fontWeight: '500' }}>—</td>
+                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8' }}>Revenue Recovered (3yr)</td>
+                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#37ca37', textAlign: 'right', fontWeight: '600' }}>{formatCurrency(calculations.totalAdditionalRevenue3Year)}</td>
+                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500' }}>—</td>
+                    <td style={{ padding: '14px 16px', fontSize: '13px', color: '#8893A8', textAlign: 'right', fontWeight: '500' }}>—</td>
                   </tr>
                 </tbody>
               </table>
@@ -879,12 +879,13 @@ export default function Index() {
 
             {/* Per Provider Impact */}
             <div style={{
-              background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(109, 205, 220, 0.04))',
-              borderRadius: '20px',
-              border: '1px solid rgba(34, 197, 94, 0.15)',
-              padding: '32px'
+              background: 'white',
+              borderRadius: '12px',
+              border: '1px solid #EDEEF2',
+              padding: '32px',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.06)'
             }}>
-              <h3 style={{ fontSize: '16px', fontWeight: '600', color: 'white', margin: '0 0 20px 0' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#212371', margin: '0 0 20px 0', fontFamily: "'Inter', sans-serif" }}>
                 Per Provider Impact (3 Years)
               </h3>
               
