@@ -325,22 +325,23 @@ export default function Index() {
             
             {/* Practice Config */}
             <div style={{
-              background: 'rgba(255,255,255,0.02)',
-              backdropFilter: 'blur(20px)',
-              borderRadius: '20px',
-              border: '1px solid rgba(255,255,255,0.06)',
-              padding: '28px'
+              background: 'white',
+              borderRadius: '12px',
+              border: '1px solid #EDEEF2',
+              padding: '28px',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.06)'
             }}>
-              <h2 style={{ 
-                fontSize: '16px', 
-                fontWeight: '600', 
-                color: 'white',
+              <h2 style={{
+                fontSize: '16px',
+                fontWeight: '600',
+                color: '#212371',
                 margin: '0 0 20px 0',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '10px'
+                gap: '10px',
+                fontFamily: "'Inter', sans-serif"
               }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6dcddc" strokeWidth="2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#37ca37" strokeWidth="2">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                   <circle cx="9" cy="7" r="4"/>
                   <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
@@ -352,14 +353,14 @@ export default function Index() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 
                 {/* Solo Practice Toggle */}
-                <div style={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
                   justifyContent: 'space-between',
                   padding: '12px 16px',
-                  background: isSoloPractice ? 'rgba(109, 205, 220, 0.1)' : 'rgba(255,255,255,0.03)',
+                  background: isSoloPractice ? 'rgba(55, 202, 55, 0.08)' : '#F7F8F9',
                   borderRadius: '10px',
-                  border: `1px solid ${isSoloPractice ? 'rgba(109, 205, 220, 0.3)' : 'rgba(255,255,255,0.06)'}`,
+                  border: `1px solid ${isSoloPractice ? '#37ca37' : '#EDEEF2'}`,
                   cursor: 'pointer',
                   transition: 'all 0.2s ease'
                 }}
@@ -367,11 +368,11 @@ export default function Index() {
                   setIsSoloPractice(!isSoloPractice);
                   if (!isSoloPractice) setProviders(1);
                 }}>
-                  <span style={{ fontSize: '14px', color: '#cbd5e1' }}>Solo Practice</span>
+                  <span style={{ fontSize: '14px', color: '#212371' }}>Solo Practice</span>
                   <div style={{
                     width: '44px',
                     height: '24px',
-                    background: isSoloPractice ? '#6dcddc' : '#334155',
+                    background: isSoloPractice ? '#37ca37' : '#CBD5E0',
                     borderRadius: '12px',
                     position: 'relative',
                     transition: 'background 0.2s ease'
@@ -392,8 +393,8 @@ export default function Index() {
                 {/* Providers */}
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                    <label style={{ fontSize: '14px', color: '#94a3b8' }}>Providers</label>
-                    <span style={{ fontSize: '14px', color: '#6dcddc', fontWeight: '600' }}>{providers}</span>
+                    <label style={{ fontSize: '14px', color: '#8893A8' }}>Providers</label>
+                    <span style={{ fontSize: '14px', color: '#37ca37', fontWeight: '600' }}>{providers}</span>
                   </div>
                   <input
                     type="range"
@@ -406,7 +407,7 @@ export default function Index() {
                       width: '100%',
                       height: '6px',
                       borderRadius: '3px',
-                      background: `linear-gradient(to right, #3c52a3 0%, #6dcddc ${(providers/50)*100}%, #1e293b ${(providers/50)*100}%)`,
+                      background: `linear-gradient(to right, #37ca37 0%, #37ca37 ${(providers/50)*100}%, #EDEEF2 ${(providers/50)*100}%)`,
                       appearance: 'none',
                       cursor: isSoloPractice ? 'not-allowed' : 'pointer',
                       opacity: isSoloPractice ? 0.5 : 1
