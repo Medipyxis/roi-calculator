@@ -237,7 +237,39 @@ export default function Index() {
             objectFit: 'contain'
           }}
         />
-        <div style={{ display: 'flex', gap: '12px' }}>
+        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+          <a
+            href="https://storage.googleapis.com/msgsndr/gwLlGQ7RXvOTbVZjTWZs/media/6967bad4cd8665e2ca22fd56.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              padding: '10px 20px',
+              borderRadius: '6px',
+              background: '#188bf6',
+              color: 'white',
+              fontSize: '15px',
+              fontWeight: '600',
+              textDecoration: 'none',
+              transition: 'all 0.2s ease',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.background = '#1576d1';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.background = '#188bf6';
+            }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            0% Financing Available
+          </a>
           <a
             href="https://medipyxis.com/pricing-contact-form"
             target="_blank"
