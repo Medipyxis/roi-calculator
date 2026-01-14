@@ -744,12 +744,13 @@ export default function Index() {
 
             {/* 3-Way Cost Comparison */}
             <div style={{
-              background: 'rgba(255,255,255,0.02)',
-              borderRadius: '20px',
-              border: '1px solid rgba(255,255,255,0.06)',
-              padding: '32px'
+              background: 'white',
+              borderRadius: '12px',
+              border: '1px solid #EDEEF2',
+              padding: '32px',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.06)'
             }}>
-              <h3 style={{ fontSize: '16px', fontWeight: '600', color: 'white', margin: '0 0 24px 0' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#212371', margin: '0 0 24px 0', fontFamily: "'Inter', sans-serif" }}>
                 3-Year Total Cost Comparison
               </h3>
               
@@ -762,7 +763,7 @@ export default function Index() {
                 ]}
                 labels={['Medipyxis', 'Current 8 Tools', 'Salesforce HC + 6 Tools']}
                 colors={[
-                  'linear-gradient(90deg, #3c52a3, #6dcddc)',
+                  '#37ca37',
                   '#f59e0b',
                   '#ef4444'
                 ]}
@@ -774,42 +775,43 @@ export default function Index() {
                 gap: '16px',
                 marginTop: '20px',
                 padding: '20px',
-                background: 'rgba(0,0,0,0.2)',
+                background: '#F7F8F9',
                 borderRadius: '12px'
               }}>
                 <div>
-                  <div style={{ fontSize: '11px', color: '#64748b', marginBottom: '4px' }}>MEDIPYXIS</div>
-                  <div style={{ fontSize: '13px', color: '#cbd5e1' }}>
+                  <div style={{ fontSize: '11px', color: '#8893A8', marginBottom: '4px', fontWeight: '600' }}>MEDIPYXIS</div>
+                  <div style={{ fontSize: '13px', color: '#212371' }}>
                     {formatCurrency(calculations.medipyxisStartup)} startup + {formatCurrency(calculations.medipyxisMonthly)}/mo
                   </div>
-                  <div style={{ fontSize: '11px', color: '#22c55e', marginTop: '4px' }}>✓ Replaces all 8 tools</div>
+                  <div style={{ fontSize: '11px', color: '#37ca37', marginTop: '4px', fontWeight: '600' }}>✓ Replaces all 8 tools</div>
                 </div>
                 <div>
-                  <div style={{ fontSize: '11px', color: '#64748b', marginBottom: '4px' }}>CURRENT STATE</div>
-                  <div style={{ fontSize: '13px', color: '#cbd5e1' }}>
+                  <div style={{ fontSize: '11px', color: '#8893A8', marginBottom: '4px', fontWeight: '600' }}>CURRENT STATE</div>
+                  <div style={{ fontSize: '13px', color: '#212371' }}>
                     {formatCurrency(calculations.currentMonthlyTotal)}/mo across 8 systems
                   </div>
-                  <div style={{ fontSize: '11px', color: '#f59e0b', marginTop: '4px' }}>⚠ Fragmented, no integration</div>
+                  <div style={{ fontSize: '11px', color: '#f59e0b', marginTop: '4px', fontWeight: '600' }}>⚠ Fragmented, no integration</div>
                 </div>
                 <div>
-                  <div style={{ fontSize: '11px', color: '#64748b', marginBottom: '4px' }}>SALESFORCE HEALTH CLOUD</div>
-                  <div style={{ fontSize: '13px', color: '#cbd5e1' }}>
+                  <div style={{ fontSize: '11px', color: '#8893A8', marginBottom: '4px', fontWeight: '600' }}>SALESFORCE HEALTH CLOUD</div>
+                  <div style={{ fontSize: '13px', color: '#212371' }}>
                     $250K + {formatCurrency(calculations.salesforceMonthlyTotal)}/mo
                   </div>
-                  <div style={{ fontSize: '11px', color: '#ef4444', marginTop: '4px' }}>✗ Only replaces 2 of 8 tools</div>
+                  <div style={{ fontSize: '11px', color: '#ef4444', marginTop: '4px', fontWeight: '600' }}>✗ Only replaces 2 of 8 tools</div>
                 </div>
               </div>
             </div>
 
             {/* Detailed Comparison Table */}
             <div style={{
-              background: 'rgba(255,255,255,0.02)',
-              borderRadius: '20px',
-              border: '1px solid rgba(255,255,255,0.06)',
+              background: 'white',
+              borderRadius: '12px',
+              border: '1px solid #EDEEF2',
               padding: '32px',
-              overflow: 'hidden'
+              overflow: 'hidden',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.06)'
             }}>
-              <h3 style={{ fontSize: '16px', fontWeight: '600', color: 'white', margin: '0 0 24px 0' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#212371', margin: '0 0 24px 0', fontFamily: "'Inter', sans-serif" }}>
                 Detailed Comparison
               </h3>
               
