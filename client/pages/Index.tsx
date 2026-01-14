@@ -177,15 +177,15 @@ export default function Index() {
     
     return (
       <div style={{ marginBottom: '24px' }}>
-        <div style={{ fontSize: '13px', color: '#64748b', marginBottom: '10px', fontWeight: '500' }}>{label}</div>
+        <div style={{ fontSize: '13px', color: '#8893A8', marginBottom: '10px', fontWeight: '500' }}>{label}</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           {values.map((value, idx) => (
             <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div style={{ width: '120px', fontSize: '12px', color: '#cbd5e1', flexShrink: 0 }}>{labels[idx]}</div>
-              <div style={{ flex: 1, height: '32px', backgroundColor: '#1e293b', borderRadius: '6px', overflow: 'hidden' }}>
-                <div style={{ 
-                  width: `${(value / max) * 100}%`, 
-                  height: '100%', 
+              <div style={{ width: '120px', fontSize: '12px', color: '#212371', flexShrink: 0, fontWeight: '500' }}>{labels[idx]}</div>
+              <div style={{ flex: 1, height: '32px', backgroundColor: '#EDEEF2', borderRadius: '6px', overflow: 'hidden' }}>
+                <div style={{
+                  width: `${(value / max) * 100}%`,
+                  height: '100%',
                   background: colors[idx],
                   borderRadius: '6px',
                   display: 'flex',
