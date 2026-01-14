@@ -597,14 +597,15 @@ export default function Index() {
                 }}
                 onClick={() => setShowDetailedCosts(!showDetailedCosts)}
               >
-                <h2 style={{ 
-                  fontSize: '16px', 
-                  fontWeight: '600', 
-                  color: 'white',
+                <h2 style={{
+                  fontSize: '16px',
+                  fontWeight: '600',
+                  color: '#212371',
                   margin: 0,
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '10px'
+                  gap: '10px',
+                  fontFamily: "'Inter', sans-serif"
                 }}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="2">
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
@@ -617,12 +618,12 @@ export default function Index() {
                   <span style={{ fontSize: '14px', color: '#f59e0b', fontWeight: '600' }}>
                     {formatCurrency(calculations.currentMonthlyPerUser)}/user/mo
                   </span>
-                  <svg 
-                    width="16" 
-                    height="16" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="#64748b" 
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#8893A8"
                     strokeWidth="2"
                     style={{ 
                       transform: showDetailedCosts ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -638,9 +639,9 @@ export default function Index() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {Object.entries(currentSoftwareCosts).map(([key, value]) => (
                     <div key={key} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                      <span style={{ 
-                        fontSize: '13px', 
-                        color: '#94a3b8', 
+                      <span style={{
+                        fontSize: '13px',
+                        color: '#8893A8',
                         width: '120px',
                         textTransform: 'capitalize'
                       }}>
@@ -653,14 +654,14 @@ export default function Index() {
                         style={{
                           flex: 1,
                           padding: '8px 12px',
-                          background: 'rgba(255,255,255,0.05)',
-                          border: '1px solid rgba(255,255,255,0.1)',
+                          background: '#F7F8F9',
+                          border: '1px solid #EDEEF2',
                           borderRadius: '6px',
-                          color: 'white',
+                          color: '#212371',
                           fontSize: '13px'
                         }}
                       />
-                      <span style={{ fontSize: '12px', color: '#64748b' }}>/mo</span>
+                      <span style={{ fontSize: '12px', color: '#8893A8' }}>/mo</span>
                     </div>
                   ))}
                 </div>
